@@ -4,20 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <title>To-Do SPA</title>
+  <title>Your To Do List</title>
 </head>
 <body>
-  <h1>To-Do SPA</h1>
-
-  <script>
-    // your code:
-    var apiClient = axios.create()
+  <div class="container">
+    <section class="hero is-success">
+        <div class="hero-body">
+            <h1 class="title">
+              Your To Do List
+            </h1>
+            <h2 class="subtitle">
+              A list of things for you to do.
+            </h2>
+        </div>
+      </section>
+  <section>
+    <hr>
+    <div id="list">
+      
+    </div>
+  </section>
+  
+    <div class="columns">
+      <div class="column is-four-fifths">
+        <input type="text" id="new-todo" placeholder="What do you need done?" class="input is-primary">
+      </div>
+      <div class="column">
+        <button id="submit" class="button is-info"> Submit </button>
+      </div>
+    </div>
+  </div>
+<script src="/js/main.js"></script>
     
-    // The front-end
+    <!-- // The front-end
     // 1. When a user goes to localhost:3000, they'll be served this html file. This script should immediately attempt to load all Todo items, and display them in <li> tags within a <ul>. Each <li> will have a <span> that contains the todo body, and buttons to toggle complete and delete.
     
     // 2. Create a text field and button that allows a user to submit a new todo item with a post request. When this client app receives confirmation from the server that a todo item was saved, append or prepend the new item to the <ul> 
@@ -30,7 +54,6 @@
     // 5. Style it up! You can use Bootstrap, Milligram, or explore some other CSS libraries such as:
       // Pure CSS (Easy): https://purecss.io/
       // Bulma (Medium): https://bulma.io
-      // Semantic UI (Hard): https://semantic-ui.com/
-  </script>
+      // Semantic UI (Hard): https://semantic-ui.com/ -->
 </body>
 </html>

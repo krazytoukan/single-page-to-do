@@ -6,14 +6,17 @@ const
   mongoose = require('mongoose'),
   logger = require('morgan'),
   PORT = 3000
+  toDoRouter = require('./routes/todos.js')
 
-mongoose.connect('mongodb://localhost/todo-spa', (err) => {
+mongoose.connect(process.env.MONGODB_URI, (err) => {
   console.log(err || "Connected to MongoDB.")
 })
 
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.static('public'))
+
+app.use('/api/todos', toDoRouter)
  
 /* ON THE SERVER SIDE:
 1. Build your Todo model in './models/Todo.js' (more info in that file)
